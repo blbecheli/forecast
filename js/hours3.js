@@ -14,8 +14,12 @@ export const showHour = async (city) => {
     for (let i = 0; i < 8; i++) {
         const temperature3hour = `
         <div class= "div3Hour">
-            <h3>${data.list[i].dt_txt.substring(11, 16)}</h3>
-            <p>${Math.round(data.list[i].main.temp) + "º C"}</p>
+            <h3>
+            <i class="fa-regular fa-clock"></i>
+            ${data.list[i].dt_txt.substring(11, 16)}</h3>
+            <p>
+            <i class="fa-solid fa-temperature-three-quarters"></i>
+            ${Math.round(data.list[i].main.temp) + "º C"}</p>
             <img src = ${`http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`}></img>
         </div> `
         hour3.innerHTML += temperature3hour
@@ -60,8 +64,12 @@ const createDay = async (city, date) => {
         informacoes.forEach(element => {
             const html = `
             <div class= "div3Hour">
-            <h3>${element.hora}:00</h3>
-            <p>${Math.round(element.temperatura) + "º C"}</p>
+            <h3>
+            <i class="fa-regular fa-clock"></i>
+            ${element.hora}:00</h3>
+            <p>
+            <i class="fa-solid fa-temperature-three-quarters"></i>
+            ${Math.round(element.temperatura) + "º C"}</p>
             <img src = ${`http://openweathermap.org/img/wn/${element.icon}.png`}></img>
         </div> `           
             

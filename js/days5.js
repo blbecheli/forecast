@@ -15,7 +15,7 @@ export const showDaily = async (city) => {
     const data = await getWeatherDaily(city);
     const data2 = await dataTeste(city);
     console.log(data2);
-    const daily = document.querySelector('#daily')    
+    const daily = document.querySelector('#daily')
     const title = `<h2>Daily Forecast - 5 days</h2>
    <div class= "hour5title">
    </div> `
@@ -26,12 +26,16 @@ export const showDaily = async (city) => {
         const temperature5hour = `
         <div class= "div5Hour">
             <h3>${data2[i].dia.substring(5, 10)}</h3>
-            <p> Min: ${Math.round(data2[i].min)} ºC</p>
-            <p> Max: ${Math.round(data2[i].max)} ºC</p>
+            <p> 
+            <i class="fa-solid fa-temperature-low"></i>
+            Min: ${Math.round(data2[i].min)} ºC</p>
+            <p> 
+            <i class="fa-solid fa-temperature-high"></i>
+            Max: ${Math.round(data2[i].max)} ºC</p>
             <img src = ${`http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`}></img>
         </div> `
 
-        hour5.innerHTML += temperature5hour        
+        hour5.innerHTML += temperature5hour
     }
 }
 
