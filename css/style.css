@@ -6,7 +6,8 @@
 }
 
 body {
-  background: linear-gradient(180deg, rgba(89, 76, 238, 1) 0%, #8dd0f5 100%); 
+  background-color: rgba(192, 192, 192, .1);
+  /* background: linear-gradient(180deg, rgba(192, 192, 192, 1) 0%, white 100%);  */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -19,21 +20,11 @@ header {
   text-align: center;
 }
 
-
-
-.logo{
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  border-radius: 10px;
-  width: fit-content;
-  padding: .3rem;
-  margin: 0 auto;
-}
-
 .nav{
   display: flex;
   justify-content: space-between;
   margin: 1rem 5rem;
+  align-items: center;
 }
 
 .hide {
@@ -82,6 +73,7 @@ header {
   width: 30vw;
   margin: 0 auto;
   color: white;
+  border-radius: 5px;
 }
 
 #weather-data,
@@ -168,6 +160,8 @@ header {
 #daily h2{
   background-color: rgba(0, 0, 0, 0.7);
   width: 47.5%;
+  border-radius: 5px 5px 0 0;
+  padding-left: 1rem;
 }
 
 .hour5title{    
@@ -176,6 +170,7 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem 0;    
   text-align: center;
+  border-radius: 0 5px 5px 5px;
 }
 
 .div5hour{
@@ -199,6 +194,8 @@ header {
 #hour h2{
   background-color: rgba(0, 0, 0, 0.7);
   width: 47.5%;
+  border-radius: 5px 5px 0 0;
+  padding-left: 1rem;
 }
 
 #hour div {
@@ -215,6 +212,7 @@ header {
   display: flex;  
   justify-content: space-evenly;
   margin: 0 auto;
+  border-radius: 0 5px 5px 0;
 }
 
 .hour3title div{
